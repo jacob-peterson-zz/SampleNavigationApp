@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/dest_fragment_a">
+
+    <fragment android:id="@+id/dest_fragment_a"
+              android:name="com.example.sampleapp.FragmentA"
+              android:label="@string/title_fragment_a">
+        <deepLink app:uri="test.com"/>
+    </fragment>
+
+    <fragment android:id="@+id/dest_fragment_b"
+              android:name="com.example.sampleapp.FragmentB"
+              android:label="@string/title_fragment_b">
+        <argument android:name="query" app:argType="string"/>
+
+        <deepLink app:uri="test.com?query={query}"/>
+    </fragment>
+
+</navigation>
